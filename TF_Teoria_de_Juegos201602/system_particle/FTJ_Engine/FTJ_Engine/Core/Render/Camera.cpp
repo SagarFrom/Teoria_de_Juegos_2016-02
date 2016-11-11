@@ -51,13 +51,14 @@ namespace FTJ
 
 #if 1
 		XMVECTOR position = GetGameObject()->GetTransform()->GetPosition();
-		CalculateMVP(XMMatrixIdentity(), 
-			XMMatrixTranslation(position.m128_f32[0], position.m128_f32[1], position.m128_f32[2]));
+		XMMATRIX translation = XMMatrixTranslation(position.m128_f32[0], position.m128_f32[1], position.m128_f32[2]);
+
+		CalculateMVP(XMMatrixIdentity(),
+			translation);
 #else
 		m_MVP.viewMatrix = GetGameObject()->GetTransform()->CalculateWorldMatrix();
 		XMVECTOR determinant = XMMatrixDeterminant(m_MVP.viewMatrix);
 		m_MVP.viewMatrix = XMMatrixInverse(&determinant, m_MVP.viewMatrix);
 #endif
 	}
-
 }

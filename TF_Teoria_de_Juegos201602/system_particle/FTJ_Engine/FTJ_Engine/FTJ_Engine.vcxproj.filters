@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{451c043f-9a9c-451b-aa08-2eade5957674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{8a862a11-7c44-48a0-8417-19b4864b9914}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\Shaders">
+      <UniqueIdentifier>{8ce968a9-70ce-4c57-b5a7-12565a3c50c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TinyXML">
+      <UniqueIdentifier>{ce7fead2-c97a-4c15-afaa-10172efbb32a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{ceb4a389-87ae-4016-8199-2673782fe567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{e452b820-8113-4618-98d1-aa6addc2a3fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Events">
+      <UniqueIdentifier>{4a14b9a0-1268-4f0c-b036-3e49e3ba06e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\RenderAssets">
+      <UniqueIdentifier>{6a186f0b-3000-4615-9c0e-07c7fa288ba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Components">
+      <UniqueIdentifier>{1f102333-bb33-40f6-bf81-5ffa969ceb99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameScene">
+      <UniqueIdentifier>{2463c580-50c6-480e-aa81-4018f9805f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Behaviors">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Render\Context">
+      <UniqueIdentifier>{4f81f6cf-5899-4dc3-8d1b-6364b6ec36d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Console">
+      <UniqueIdentifier>{335356a5-e3ad-4ce6-b9e6-1674e0412547}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Time\XTime.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Asset\TinyXML\tinystr.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Asset\TinyXML\tinyxml.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Asset\TinyXML\tinyxmlerror.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Asset\TinyXML\tinyxmlparser.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Entity\IEntity.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Entity\GameObject.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Entities\Player.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Events\EventManager.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Events\Listener.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Events\Event.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Input\InputManager.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Entity\EntityManager.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\FTJ_RenderManager.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Asset\DDSTextureLoader.cpp">
+      <Filter>Render\RenderAssets</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Asset\AssetManager.cpp">
+      <Filter>Render\RenderAssets</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Main.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Game.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\RenderComponent.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\Mesh.cpp">
+      <Filter>Render\RenderAssets</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Entity\IComponent.cpp">
+      <Filter>Entities\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Entity\IBehavior.cpp">
+      <Filter>Entities\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\Camera.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\GameScenes\IGameScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\GameScenes\MainGameScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Entity\Transform.cpp">
+      <Filter>Entities\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\2DContext.cpp">
+      <Filter>Render\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\3DContext.cpp">
+      <Filter>Render\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\BaseContext.cpp">
+      <Filter>Render\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\SpriteRenderer.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\MeshRenderer.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Log\DXLog.cpp">
+      <Filter>Core\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Log\Log.cpp">
+      <Filter>Core\Console</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Time\XTime.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Asset\TinyXML\tinystr.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Asset\TinyXML\tinyxml.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Entity\IEntity.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Entity\GameObject.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Events\Event.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Events\Listener.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Events\EventManager.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\RenderComponent.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Input\InputManager.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Entity\EntityManager.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Asset\AssetManager.h">
+      <Filter>Render\RenderAssets</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Asset\DDSTextureLoader.h">
+      <Filter>Render\RenderAssets</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\FTJ_RenderManager.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\Camera.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Game.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\Mesh.h">
+      <Filter>Render\RenderAssets</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Entity\IComponent.h">
+      <Filter>Entities\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Entity\IBehavior.h">
+      <Filter>Entities\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\FTJ_ShaderDefinitions.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GameScenes\IGameScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GameScenes\MainGameScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Entity\Transform.h">
+      <Filter>Entities\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Entities\Player.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\2DContext.h">
+      <Filter>Render\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\3DContext.h">
+      <Filter>Render\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\BaseContext.h">
+      <Filter>Render\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\SpriteRenderer.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\MeshRenderer.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\FTJ_Console.h">
+      <Filter>Core\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Log\DXLog.h">
+      <Filter>Core\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Log\DXLog.hpp">
+      <Filter>Core\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Log\Log.h">
+      <Filter>Core\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Log\Log.hpp">
+      <Filter>Core\Console</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Assets\Shaders\Default2D_GS.hlsl">
+      <Filter>Render\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shaders\Default2D_PS.hlsl">
+      <Filter>Render\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shaders\Default2D_VS.hlsl">
+      <Filter>Render\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shaders\Default3D_PS.hlsl">
+      <Filter>Render\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shaders\Default3D_VS.hlsl">
+      <Filter>Render\Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FTJ_Engine.rc">
+      <Filter>Core\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

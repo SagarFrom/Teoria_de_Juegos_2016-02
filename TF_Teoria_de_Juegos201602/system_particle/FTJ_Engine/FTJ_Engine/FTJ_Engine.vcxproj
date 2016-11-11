@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D3F74B0D-CDCE-4E87-91E0-50804B0CC766}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FTJ_Engine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Asset\AssetManager.cpp" />
+    <ClCompile Include="Core\Asset\DDSTextureLoader.cpp" />
+    <ClCompile Include="Core\Asset\TinyXML\tinystr.cpp" />
+    <ClCompile Include="Core\Asset\TinyXML\tinyxml.cpp" />
+    <ClCompile Include="Core\Asset\TinyXML\tinyxmlerror.cpp" />
+    <ClCompile Include="Core\Asset\TinyXML\tinyxmlparser.cpp" />
+    <ClCompile Include="Core\Entity\EntityManager.cpp" />
+    <ClCompile Include="Core\Entity\GameObject.cpp" />
+    <ClCompile Include="Core\Entity\IBehavior.cpp" />
+    <ClCompile Include="Core\Entity\IComponent.cpp" />
+    <ClCompile Include="Core\Entity\IEntity.cpp" />
+    <ClCompile Include="Core\Entity\Transform.cpp" />
+    <ClCompile Include="Core\Events\Event.cpp" />
+    <ClCompile Include="Core\Events\EventManager.cpp" />
+    <ClCompile Include="Core\Events\Listener.cpp" />
+    <ClCompile Include="Core\Game.cpp" />
+    <ClCompile Include="Core\GameScenes\IGameScene.cpp" />
+    <ClCompile Include="Core\GameScenes\MainGameScene.cpp" />
+    <ClCompile Include="Core\Input\InputManager.cpp" />
+    <ClCompile Include="Core\Log\DXLog.cpp" />
+    <ClCompile Include="Core\Log\Log.cpp" />
+    <ClCompile Include="Core\Main.cpp" />
+    <ClCompile Include="Core\Render\2DContext.cpp" />
+    <ClCompile Include="Core\Render\3DContext.cpp" />
+    <ClCompile Include="Core\Render\BaseContext.cpp" />
+    <ClCompile Include="Core\Render\Camera.cpp" />
+    <ClCompile Include="Core\Render\FTJ_RenderManager.cpp" />
+    <ClCompile Include="Core\Render\Mesh.cpp" />
+    <ClCompile Include="Core\Render\MeshRenderer.cpp" />
+    <ClCompile Include="Core\Render\RenderComponent.cpp" />
+    <ClCompile Include="Core\Render\SpriteRenderer.cpp" />
+    <ClCompile Include="Core\Time\XTime.cpp" />
+    <ClCompile Include="Game\Entities\Player.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Asset\AssetManager.h" />
+    <ClInclude Include="Core\Asset\DDSTextureLoader.h" />
+    <ClInclude Include="Core\Asset\TinyXML\tinystr.h" />
+    <ClInclude Include="Core\Asset\TinyXML\tinyxml.h" />
+    <ClInclude Include="Core\Entity\EntityManager.h" />
+    <ClInclude Include="Core\Entity\GameObject.h" />
+    <ClInclude Include="Core\Entity\IBehavior.h" />
+    <ClInclude Include="Core\Entity\IComponent.h" />
+    <ClInclude Include="Core\Entity\IEntity.h" />
+    <ClInclude Include="Core\Entity\Transform.h" />
+    <ClInclude Include="Core\Events\Event.h" />
+    <ClInclude Include="Core\Events\EventManager.h" />
+    <ClInclude Include="Core\Events\Listener.h" />
+    <ClInclude Include="Core\FTJ_Console.h" />
+    <ClInclude Include="Core\Game.h" />
+    <ClInclude Include="Core\GameScenes\IGameScene.h" />
+    <ClInclude Include="Core\GameScenes\MainGameScene.h" />
+    <ClInclude Include="Core\Input\InputManager.h" />
+    <ClInclude Include="Core\Log\DXLog.h" />
+    <ClInclude Include="Core\Log\DXLog.hpp" />
+    <ClInclude Include="Core\Log\Log.h" />
+    <ClInclude Include="Core\Log\Log.hpp" />
+    <ClInclude Include="Core\Render\2DContext.h" />
+    <ClInclude Include="Core\Render\3DContext.h" />
+    <ClInclude Include="Core\Render\BaseContext.h" />
+    <ClInclude Include="Core\Render\Camera.h" />
+    <ClInclude Include="Core\Render\FTJ_RenderManager.h" />
+    <ClInclude Include="Core\Render\FTJ_ShaderDefinitions.h" />
+    <ClInclude Include="Core\Render\Mesh.h" />
+    <ClInclude Include="Core\Render\MeshRenderer.h" />
+    <ClInclude Include="Core\Render\RenderComponent.h" />
+    <ClInclude Include="Core\Render\SpriteRenderer.h" />
+    <ClInclude Include="Core\Time\XTime.h" />
+    <ClInclude Include="Game\Entities\Player.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Assets\Shaders\Default2D_GS.hlsl">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).csh</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).csh</HeaderFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Geometry</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Geometry</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Assets\Shaders\Default2D_PS.hlsl">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).csh</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).csh</HeaderFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Assets\Shaders\Default2D_VS.hlsl">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).csh</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).csh</HeaderFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Assets\Shaders\Default3D_PS.hlsl">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).csh</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).csh</HeaderFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Assets\Shaders\Default3D_VS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).csh</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).csh</HeaderFileOutput>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FTJ_Engine.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
