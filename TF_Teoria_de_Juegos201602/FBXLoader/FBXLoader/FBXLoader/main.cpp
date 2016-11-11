@@ -14,7 +14,7 @@ void Load_FBXMesh(FbxMesh* _pMesh, Model* _model);
 
 //Escribe un archivo .bin con la informacion de una mesh 3D
 void Write_ModelBinary(std::string _filepath, const Model* _pModel)
-{
+{	
 
 }
 
@@ -26,6 +26,8 @@ void Read_ModelBinary(char* _filepath, Model** _ppModel)
 //Imprime contenido de un Modelo
 void Print_Model(const Model* _pMesh)
 {
+	
+	cout << _pMesh;
 
 }
 
@@ -47,7 +49,7 @@ void LoadNode(FbxNode* _node, Model* _model)
 //Lee el archivo FBX y actua segun los tipos de nodos que encuentra
 bool Load_FBXModel(FbxManager* manager, FbxImporter* importer, std::string _filename, Model** _ppModel)
 {
-	string filename = _filename + ".fbx";
+	string filename = "D:\\FBXLoader\\FBXLoader\\FBXLoader\\Assets\\" + _filename + ".fbx";
 	if (importer->Initialize(filename.c_str(), -1, manager->GetIOSettings()) == false)
 	{
 		string temp = importer->GetStatus().GetErrorString();
