@@ -1,8 +1,74 @@
-﻿Compilación iniciada a las 12/11/2016 16:43:04.
+﻿Compilación iniciada a las 12/11/2016 17:01:16.
      1>Proyecto "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\FTJ_Engine.vcxproj" en el nodo 2 (Build destinos).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\UPC\Funda de Juegos\TFSDK\2015.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Core\Render\Mesh.cpp
+     1>FxCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T gs_4_0 /Fh "Default2D_GS.csh" /Fo "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default2D_GS.cso" /Vn "Default2D_GS" /Od /Zi Assets\Shaders\Default2D_GS.hlsl 
+         compilation header save succeeded; see C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\Default2D_GS.csh
+         compilation object save succeeded; see C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default2D_GS.cso
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0 /Fh "Default2D_PS.csh" /Fo "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default2D_PS.cso" /Vn "Default2D_PS" /Od /Zi Assets\Shaders\Default2D_PS.hlsl 
+         compilation header save succeeded; see C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\Default2D_PS.csh
+         compilation object save succeeded; see C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default2D_PS.cso
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_4_0 /Fh "Default2D_VS.csh" /Fo "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default2D_VS.cso" /Vn "Default2D_VS" /Od /Zi Assets\Shaders\Default2D_VS.hlsl 
+         compilation header save succeeded; see C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\Default2D_VS.csh
+         compilation object save succeeded; see C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default2D_VS.cso
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0 /Fh "Default3D_PS.csh" /Fo "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default3D_PS.cso" /Vn "Default3D_PS" /Od /Zi Assets\Shaders\Default3D_PS.hlsl 
+         compilation header save succeeded; see C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\Default3D_PS.csh
+         compilation object save succeeded; see C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default3D_PS.cso
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_4_0 /Fh "Default3D_VS.csh" /Fo "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default3D_VS.cso" /Vn "Default3D_VS" /Od /Zi Assets\Shaders\Default3D_VS.hlsl 
+         compilation header save succeeded; see C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\Default3D_VS.csh
+         compilation object save succeeded; see C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default3D_VS.cso
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\UPC\Funda de Juegos\TFSDK\2015.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Core\Asset\AssetManager.cpp Core\Asset\DDSTextureLoader.cpp Core\Asset\TinyXML\tinystr.cpp Core\Asset\TinyXML\tinyxml.cpp Core\Asset\TinyXML\tinyxmlerror.cpp Core\Asset\TinyXML\tinyxmlparser.cpp Core\Entity\EntityManager.cpp Core\Entity\GameObject.cpp Core\Entity\IBehavior.cpp Core\Entity\IComponent.cpp Core\Entity\IEntity.cpp Core\Entity\Transform.cpp Core\Events\Event.cpp Core\Events\EventManager.cpp Core\Events\Listener.cpp Core\Game.cpp Core\GameScenes\IGameScene.cpp Core\GameScenes\MainGameScene.cpp Core\Input\InputManager.cpp Core\Log\DXLog.cpp Core\Log\Log.cpp Core\Main.cpp Core\Render\2DContext.cpp Core\Render\3DContext.cpp Core\Render\BaseContext.cpp Core\Render\Camera.cpp Core\Render\FTJ_RenderManager.cpp Core\Render\Mesh.cpp Core\Render\MeshRenderer.cpp Core\Render\RenderComponent.cpp Core\Render\SpriteRenderer.cpp Core\Time\XTime.cpp FBXLoader.cpp Game\Entities\Player.cpp
+         Player.cpp
+         FBXLoader.cpp
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\fbxloader.cpp(25): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\fbxloader.cpp(149): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\fbxloader.cpp(153): warning C4244: '=' : conversión de 'fbxsdk_2015_1::FbxDouble' a 'float'; posible pérdida de datos
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\fbxloader.cpp(160): warning C4018: '<' : no coinciden signed/unsigned
+         XTime.cpp
+         SpriteRenderer.cpp
+         RenderComponent.cpp
+         MeshRenderer.cpp
          Mesh.cpp
+         FTJ_RenderManager.cpp
+         Camera.cpp
+         BaseContext.cpp
+         3DContext.cpp
+         2DContext.cpp
+         Main.cpp
+         Log.cpp
+         DXLog.cpp
+         InputManager.cpp
+         MainGameScene.cpp
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\core\gamescenes\maingamescene.cpp(32): warning C4316: 'FTJ::MeshRenderer' : puede que el objeto asignado en el montón no esté alineado 16
+         IGameScene.cpp
+         Game.cpp
+         Listener.cpp
+         Generando código...
+         Compilando...
+         EventManager.cpp
+         Event.cpp
+         Transform.cpp
+         IEntity.cpp
+         IComponent.cpp
+         IBehavior.cpp
+         GameObject.cpp
+         EntityManager.cpp
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\core\entity\entitymanager.cpp(57): warning C4316: 'FTJ::CTransform' : puede que el objeto asignado en el montón no esté alineado 16
+         tinyxmlparser.cpp
+         tinyxmlerror.cpp
+         tinyxml.cpp
+         tinystr.cpp
+         DDSTextureLoader.cpp
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\core\asset\ddstextureloader.cpp(30): warning C4005: '_WIN32_WINNT' : redefinición de macro
+                 c:\program files (x86)\windows kits\8.1\include\shared\sdkddkver.h(200) : vea la definición anterior de '_WIN32_WINNT'
+         AssetManager.cpp
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\core\asset\assetmanager.cpp(52): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\core\asset\assetmanager.cpp(56): warning C4244: '=' : conversión de 'fbxsdk_2015_1::FbxDouble' a 'float'; posible pérdida de datos
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\core\asset\assetmanager.cpp(62): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\core\asset\assetmanager.cpp(257): warning C4018: '<' : no coinciden signed/unsigned
+         Generando código...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\FTJ_Engine.res" FTJ_Engine.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86" "debug\libfbxsdk-md.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.lib" /MACHINE:X86 Debug\FTJ_Engine.res
          Debug\AssetManager.obj
@@ -44,4 +110,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:02.03
+Tiempo transcurrido 00:00:40.48

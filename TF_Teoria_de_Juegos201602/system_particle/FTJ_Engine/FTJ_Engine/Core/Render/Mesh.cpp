@@ -135,9 +135,11 @@ namespace FTJ
 			unsigned int *indices = new unsigned int[CuantosIdx];
 			archivo.read((char*)indices, sizeof(unsigned int)*CuantosIdx);
 
-			for (int j = 0; j < CuantosIdx; j++)
+			for (int j = 0; j < CuantosVrt*3; j++)
 			{
-				_pMesh->indices.push_back(indices[j]);
+				//_pMesh->indices.push_back(indices[j]);
+				_pMesh->indices.push_back(j);
+
 			}
 			//pModel->vMeshes.push_back(meshito);
 
