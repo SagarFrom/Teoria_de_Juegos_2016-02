@@ -1,7 +1,9 @@
 #include "Mesh.h"
-#define LOADMESH_BINARY 0
+#define LOADMESH_BINARY 1
 
 #include "../FTJ_Console.h"
+#include <iostream>
+#include <fstream>
 
 namespace FTJ
 {
@@ -92,6 +94,57 @@ namespace FTJ
 
 	int CMesh::LoadBIN(const char* path, CMesh* _pMesh)
 	{
+		ifstream archivo(path, ios::binary);
+		if (!archivo.is_open()){
+			return false;
+
+		}
+		//Model * pModel = *_ppModel = new Model();
+		int CuantosMesh = 0;
+		archivo.read((char*)&CuantosMesh, sizeof(int));
+		for (int i = 0; i < CuantosMesh; i++)
+		{
+			int CuantosVrt = 0;
+			int CuantosIdx = 0;
+			archivo.read((char*)&CuantosVrt, sizeof(int));
+			MeshVertex* vertices = new MeshVertex[CuantosVrt];
+			MeshVertex temp;
+			float tempf[9];
+
+			for (int i = 0; i < CuantosVrt; i++)
+			{
+				archivo.read((char*)tempf, sizeof(float)* 9);
+				temp.pos = XMFLOAT3(tempf[0], tempf[1], tempf[2]);
+				temp.uv = XMFLOAT3(tempf[3], tempf[4], tempf[5]);
+				temp.normal = XMFLOAT3(tempf[6], tempf[7], tempf[8]);
+
+				_pMesh->vertices.push_back(temp);
+
+			}
+			//archivo.read((char*)vertices, sizeof(MeshVertex)*CuantosVrt);
+		
+			//meshito->vVertices = vector<Vertex>(&vertices, sizeof(Vertex)*CuantosVrt);
+			/*for (int j = 0; j < CuantosVrt; j++)
+			{
+
+				_pMesh->vertices.push_back(vertices[j]);
+
+			}*/
+
+			archivo.read((char*)&CuantosIdx, sizeof (int));
+			unsigned int *indices = new unsigned int[CuantosIdx];
+			archivo.read((char*)indices, sizeof(unsigned int)*CuantosIdx);
+
+			for (int j = 0; j < CuantosIdx; j++)
+			{
+				_pMesh->indices.push_back(indices[j]);
+			}
+			//pModel->vMeshes.push_back(meshito);
+
+		}
+
+
+
 		return 1;
 	}
 

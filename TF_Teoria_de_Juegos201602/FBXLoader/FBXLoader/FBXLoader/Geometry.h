@@ -7,6 +7,9 @@ class Vertex
 {
 public:
 	float position[3];
+	float uv[3];
+	float normal[3];
+
 	//otros
 };
 

@@ -1,5 +1,12 @@
 <Models>
   <!--LEVEL MODELS-->
-  <ModelInfo Name="star.obj" />
+  <!--<ModelInfo Name="star.obj" />
   <ModelInfo Name="hand.obj" />
+  <ModelInfo Name="cube.fbx" />
+  <ModelInfo Name="Dragon.fbx" />
+  <ModelInfo Name="quad.fbx" />
+  <ModelInfo Name="sphere.fbx" />-->
+  <!--<ModelInfo Name="Dragon.bin" />-->
+  <ModelInfo Name="sphere.bin" />
+
 </Models>

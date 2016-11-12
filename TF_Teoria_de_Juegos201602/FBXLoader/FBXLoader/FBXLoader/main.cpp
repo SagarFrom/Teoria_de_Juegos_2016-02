@@ -161,7 +161,7 @@ int main()
 	}
 
 	Model* miModelo;
-	Load_FBXModel(manager, importer, "Dragon", &miModelo);
+	Load_FBXModel(manager, importer, "sphere", &miModelo);
 
 	Print_Model(miModelo);
 

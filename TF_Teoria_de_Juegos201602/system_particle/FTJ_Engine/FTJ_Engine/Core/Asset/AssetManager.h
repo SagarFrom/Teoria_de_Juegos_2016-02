@@ -8,6 +8,10 @@
 
 #include <unordered_map>
 #include <string>
+#include <fbxsdk.h>
+#include <fbxsdk\core\fbxmanager.h>
+#include <fbxsdk\fileio\fbxiosettings.h>
+#include "../../FBXLoader.h"
 
 using namespace DirectX;
 using namespace std;
@@ -54,6 +58,7 @@ namespace FTJ
 		std::unordered_map<wstring, Texture> m_Textures;
 
 		void LoadModels();
+		bool Load_FBXModel(FbxManager* manager, FbxImporter* importer, std::string _filename, Model** _ppModel);
 	public:
 		~CAssetManager();
 		CAssetManager();
