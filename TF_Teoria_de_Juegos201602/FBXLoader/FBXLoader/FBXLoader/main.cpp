@@ -68,12 +68,12 @@ void LoadNode(FbxNode* _node, Model* _model)
 //Lee el archivo FBX y actua segun los tipos de nodos que encuentra
 bool Load_FBXModel(FbxManager* manager, FbxImporter* importer, std::string _filename, Model** _ppModel)
 {
-	string filename = "C:\\Users\\Diego\\Documents\\GitHub\\Teoria_de_Juegos_2016-02\\TF_Teoria_de_Juegos201602\\FBXLoader\\FBXLoader\\FBXLoader\\Assets" + _filename + ".fbx";
+	string filename = "C:\\Users\\Diego\\Documents\\GitHub\\Teoria_de_Juegos_2016-02\\TF_Teoria_de_Juegos201602\\FBXLoader\\FBXLoader\\FBXLoader\\Assets\\" + _filename + ".fbx";
 
 	if (importer->Initialize(filename.c_str(), -1, manager->GetIOSettings()) == false)
 	{
 		string temp = importer->GetStatus().GetErrorString();
-		//Log("Failed to initialize FbxImporter");
+
 		return false;
 	}
 
@@ -149,7 +149,6 @@ int main()
 	FbxIOSettings* ioSettings = FbxIOSettings::Create(manager, "");
 	if (ioSettings == nullptr)
 	{
-		//Log("Failed to create FbxIOSettings");
 		return false;
 	}
 
@@ -158,12 +157,11 @@ int main()
 	FbxImporter* importer = FbxImporter::Create(manager, "");
 	if (importer == nullptr)
 	{
-		//Log("Failed to create FbxImporter");
 		return false;
 	}
 
 	Model* miModelo;
-	Load_FBXModel(manager, importer, "Robot_Death", &miModelo);
+	Load_FBXModel(manager, importer, "Dragon", &miModelo);
 
 	Print_Model(miModelo);
 

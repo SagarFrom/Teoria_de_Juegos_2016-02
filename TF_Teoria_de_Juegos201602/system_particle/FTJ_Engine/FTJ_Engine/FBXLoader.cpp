@@ -59,7 +59,7 @@ void LoadNode(FbxNode* _node, Model* _model)
 //Lee el archivo FBX y actua segun los tipos de nodos que encuentra
 bool Load_FBXModel(FbxManager* manager, FbxImporter* importer, std::string _filename, Model** _ppModel)
 {
-	string filename = "C:\\Users\\Diego\\Documents\\GitHub\\Teoria_de_Juegos_2016-02\\TF_Teoria_de_Juegos201602\\FBXLoader\\FBXLoader\\FBXLoader\\Assets" + _filename + ".fbx";
+	string filename = "C:\\Users\\Diego\\Documents\\GitHub\\Teoria_de_Juegos_2016-02\\TF_Teoria_de_Juegos201602\\FBXLoader\\FBXLoader\\FBXLoader\\Assets\\" + _filename + ".fbx";
 
 	if (importer->Initialize(filename.c_str(), -1, manager->GetIOSettings()) == false)
 	{
