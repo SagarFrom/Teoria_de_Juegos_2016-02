@@ -15,6 +15,25 @@ void Load_FBXMesh(FbxMesh* _pMesh, Model* _model);
 //Escribe un archivo .bin con la informacion de una mesh 3D
 void Write_ModelBinary(std::string _filepath, const Model* _pModel)
 {	
+	ofstream arch(_filepath, ios::binary);
+	if (!arch.is_open()){
+		return;
+	}
+	int cuantosMesh = _pModel->vMeshes.size();
+
+	//TODO
+	arch.write((char*)&cuantosMesh, sizeof(int));
+	for (size_t i = 0; i < cuantosMesh; i++)
+	{
+		int cuantosVrt = _pModel->vMeshes[i]->vVertices.size();
+		int cuantosIdx = _pModel->vMeshes[i]->vIndices.size();
+		arch.write((char*)&cuantosVrt, sizeof(int));
+		arch.write((char*)_pModel->vMeshes[i]->vVertices.data(), sizeof(Vertex)*cuantosVrt);
+		arch.write((char*)&cuantosIdx, sizeof(int));
+		arch.write((char*)_pModel->vMeshes[i]->vIndices.data(), sizeof(unsigned int)*cuantosIdx);
+
+	}
+	arch.close();
 
 }
 
@@ -49,7 +68,8 @@ void LoadNode(FbxNode* _node, Model* _model)
 //Lee el archivo FBX y actua segun los tipos de nodos que encuentra
 bool Load_FBXModel(FbxManager* manager, FbxImporter* importer, std::string _filename, Model** _ppModel)
 {
-	string filename = "D:\\FBXLoader\\FBXLoader\\FBXLoader\\Assets\\" + _filename + ".fbx";
+	string filename = "C:\\Users\\Diego\\Documents\\GitHub\\Teoria_de_Juegos_2016-02\\TF_Teoria_de_Juegos201602\\FBXLoader\\FBXLoader\\FBXLoader\\Assets" + _filename + ".fbx";
+
 	if (importer->Initialize(filename.c_str(), -1, manager->GetIOSettings()) == false)
 	{
 		string temp = importer->GetStatus().GetErrorString();
@@ -91,6 +111,29 @@ bool Load_FBXModel(FbxManager* manager, FbxImporter* importer, std::string _file
 void Load_FBXMesh(FbxMesh* _pMesh, Model* _model)
 {
 
+	int puntos = _pMesh->GetControlPointsCount();
+	if (puntos == 0) return;
+	Mesh *nuevoM = new Mesh();
+	nuevoM->vVertices = vector<Vertex>(puntos);
+	auto Puntos = _pMesh->GetControlPoints();
+	for (size_t i = 0; i < puntos; i++)
+	{
+		for (size_t j = 0; j < 3; j++)
+		{
+			nuevoM->vVertices[i].position[j] = Puntos[i][j];
+		}
+		//nuevoM->vIndices[i] = _pMesh
+
+	}
+	int indices = _pMesh->GetPolygonVertexCount();
+	nuevoM->vIndices = vector<unsigned int>(indices);
+	for (size_t i = 0; i < indices; i++)
+	{
+		nuevoM->vIndices[i] = _pMesh->GetPolygonVertexIndex(i);
+	}
+
+	_model->vMeshes.push_back(nuevoM);
+
 }
 
 int main()
@@ -120,7 +163,7 @@ int main()
 	}
 
 	Model* miModelo;
-	Load_FBXModel(manager, importer, "star", &miModelo);
+	Load_FBXModel(manager, importer, "Robot_Death", &miModelo);
 
 	Print_Model(miModelo);
 
