@@ -36,9 +36,49 @@ void Write_ModelBinary(std::string _filepath, const Model* _pModel)
 
 }
 
-void Read_ModelBinary(char* _filepath, Model** _ppModel)
+bool Read_ModelBinary(char* _filepath, Model** _ppModel)
 {
+	ifstream archivo(_filepath, ios::binary);
+	if (!archivo.is_open()){
+		return false;
+		
+	}
+	Model * pModel = *_ppModel = new Model();
+	int CuantosMesh = 0;
+	archivo.read((char*)&CuantosMesh, sizeof(int));
+	for (int i = 0; i < CuantosMesh; i++)
+		 {
+		int CuantosVrt = 0;
+		int CuantosIdx = 0;
+	    archivo.read((char*)&CuantosVrt, sizeof(int));
+		Vertex* vertices = new Vertex[CuantosVrt];
+		archivo.read((char*)vertices, sizeof(Vertex)*CuantosVrt);
+		Mesh * meshito = new Mesh();
+			//meshito->vVertices = vector<Vertex>(&vertices, sizeof(Vertex)*CuantosVrt);
+			for (int j = 0; j < CuantosVrt; j++)
+			{
 
+					//	Mesh * nMesh = new Mesh();
+							//Vertex v = Vertex();
+							//archivo.read((char*)&v,sizeof Vertex);
+				meshito->vVertices.push_back(vertices[j]);
+			
+				}
+		archivo.read((char*)&CuantosIdx, sizeof (int));
+		unsigned int *indices = new unsigned int[CuantosIdx];
+		archivo.read((char*)indices, sizeof(unsigned int)*CuantosIdx);
+		
+			for (int j = 0; j < CuantosIdx; j++)
+			{
+			meshito->vIndices.push_back(indices[j]);
+			}
+		pModel->vMeshes.push_back(meshito);
+		
+			}
+	
+		
+		
+		return true;
 }
 
 void LoadNode(FbxNode* _node, Model* _model)
