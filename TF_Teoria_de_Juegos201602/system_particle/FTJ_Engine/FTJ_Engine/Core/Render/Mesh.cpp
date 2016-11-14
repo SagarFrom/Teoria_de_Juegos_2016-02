@@ -1,7 +1,9 @@
 #include "Mesh.h"
-#define LOADMESH_BINARY 0
+#define LOADMESH_BINARY 1
 
 #include "../FTJ_Console.h"
+#include <iostream>
+#include <fstream>
 
 namespace FTJ
 {
@@ -92,6 +94,50 @@ namespace FTJ
 
 	int CMesh::LoadBIN(const char* path, CMesh* _pMesh)
 	{
+		bool readed = false;
+
+		std::fstream file;
+		file.open(path, ios::binary | ios::in);
+
+		int Nvertices;
+
+
+		if (file.is_open())
+		{
+			file.read((char*)&Nvertices, sizeof(Nvertices));
+
+			for (int i = 0; i < Nvertices; i++)
+			{
+				XMFLOAT3 pos;
+				file.read((char*)&pos, sizeof(pos));
+
+				XMFLOAT3 uv;
+				file.read((char*)&uv, sizeof(uv));
+
+				XMFLOAT3 normal;
+				file.read((char*)&normal, sizeof(normal));
+
+				MeshVertex V;
+				V.pos = pos;
+				V.uv = uv;
+				V.normal = normal;
+				_pMesh->vertices.push_back(V);
+
+			}
+
+			int Nindices;
+			file.read((char*)&Nindices, sizeof(Nindices));
+
+			for (int i = 0; i < Nindices; i++)
+			{
+				uint x;
+
+				file.read((char*)&x, sizeof(x));
+				_pMesh->indices.push_back(x);
+			}
+
+			file.close();
+		}
 		return 1;
 	}
 

@@ -1,0 +1,48 @@
+﻿Compilación iniciada a las 13/11/2016 23:21:40.
+     1>Proyecto "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\FTJ_Engine.vcxproj" en el nodo 2 (Build destinos).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\UPC\Funda de Juegos\TFSDK\2015.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Core\GameScenes\MainGameScene.cpp
+         MainGameScene.cpp
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\core\gamescenes\maingamescene.cpp(32): warning C4316: 'FTJ::MeshRenderer' : puede que el objeto asignado en el montón no esté alineado 16
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86" "debug\libfbxsdk-md.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.lib" /MACHINE:X86 Debug\FTJ_Engine.res
+         Debug\AssetManager.obj
+         Debug\DDSTextureLoader.obj
+         Debug\tinystr.obj
+         Debug\tinyxml.obj
+         Debug\tinyxmlerror.obj
+         Debug\tinyxmlparser.obj
+         Debug\EntityManager.obj
+         Debug\GameObject.obj
+         Debug\IBehavior.obj
+         Debug\IComponent.obj
+         Debug\IEntity.obj
+         Debug\Transform.obj
+         Debug\Event.obj
+         Debug\EventManager.obj
+         Debug\Listener.obj
+         Debug\Game.obj
+         Debug\IGameScene.obj
+         Debug\MainGameScene.obj
+         Debug\InputManager.obj
+         Debug\DXLog.obj
+         Debug\Log.obj
+         Debug\Main.obj
+         Debug\2DContext.obj
+         Debug\3DContext.obj
+         Debug\BaseContext.obj
+         Debug\Camera.obj
+         Debug\FTJ_RenderManager.obj
+         Debug\Mesh.obj
+         Debug\MeshRenderer.obj
+         Debug\RenderComponent.obj
+         Debug\SpriteRenderer.obj
+         Debug\XTime.obj
+         Debug\FBXLoader.obj
+         Debug\Player.obj
+         FTJ_Engine.vcxproj -> C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.exe
+     1>Compilación del proyecto terminada "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\FTJ_Engine.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:02.40

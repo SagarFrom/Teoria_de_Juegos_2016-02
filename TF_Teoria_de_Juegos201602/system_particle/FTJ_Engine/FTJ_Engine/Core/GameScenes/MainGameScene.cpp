@@ -26,10 +26,12 @@ namespace FTJ
 		CRenderManager::GetInstance()->RegisterSceneCamera(
 			this, m_pCamera);
 
-		m_pCamera->GetGameObject()->GetTransform()->SetPosition(0, 0, -10.f);
+		m_pCamera->GetGameObject()->GetTransform()->SetPosition(0, 0, -6.f);
 
 		CGameObject* boxObject = m_EntityManager.Create_EmptyGameObject();
-		MeshRenderer* meshRenderer = new MeshRenderer(boxObject, "star.obj");
+		MeshRenderer* meshRenderer = new MeshRenderer(boxObject, "Robot_Walk.bin");
+
+
 
 	}
 	/*virtual*/ void CMainGameScene::OnScene_Update(const float _deltaTime) //override

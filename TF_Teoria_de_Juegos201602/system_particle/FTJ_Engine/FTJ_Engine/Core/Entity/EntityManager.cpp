@@ -2,6 +2,7 @@
 #include "GameObject.h"
 
 #include "Transform.h"
+#include "../Render/MeshRenderer.h"
 #include "../Render/Camera.h"
 
 namespace FTJ
@@ -57,6 +58,19 @@ namespace FTJ
 
 		return object;
 	}
+
+	// Para el dragon
+	//CGameObject * CEntityManager::DragonObject(const char  _nombreModel)
+	//{
+	//	CGameObject * dragon = Create_EmptyGrameObject();
+	//	MeshRenderer  * rendered = new MeshRenderer
+	//		(dragon, "Dragon.fbx", FTJ::ShaderDefinitions::eDepth::Playable, false);
+
+	//	dragon->GetTransform()->SetPosition(10, 5, 4);
+
+	//	return dragon;
+	//}
+
 
 	CCamera* CEntityManager::Create_CameraGameObject()
 	{

@@ -41,6 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -52,10 +53,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\UPC\Funda de Juegos\TFSDK\2015.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>debug\libfbxsdk-md.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -108,6 +112,7 @@
     <ClCompile Include="Core\Render\RenderComponent.cpp" />
     <ClCompile Include="Core\Render\SpriteRenderer.cpp" />
     <ClCompile Include="Core\Time\XTime.cpp" />
+    <ClCompile Include="FBXLoader.cpp" />
     <ClCompile Include="Game\Entities\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +149,7 @@
     <ClInclude Include="Core\Render\RenderComponent.h" />
     <ClInclude Include="Core\Render\SpriteRenderer.h" />
     <ClInclude Include="Core\Time\XTime.h" />
+    <ClInclude Include="FBXLoader.h" />
     <ClInclude Include="Game\Entities\Player.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>

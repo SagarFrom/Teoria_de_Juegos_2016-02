@@ -45,6 +45,9 @@
     <Filter Include="Core\Console">
       <UniqueIdentifier>{335356a5-e3ad-4ce6-b9e6-1674e0412547}</UniqueIdentifier>
     </Filter>
+    <Filter Include="FDXLoader">
+      <UniqueIdentifier>{f021afb2-90f6-4ef6-8da6-dd293f2a4290}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Time\XTime.cpp">
@@ -145,6 +148,9 @@
     </ClCompile>
     <ClCompile Include="Core\Log\Log.cpp">
       <Filter>Core\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXLoader.cpp">
+      <Filter>FDXLoader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +258,9 @@
     </ClInclude>
     <ClInclude Include="Core\Log\Log.hpp">
       <Filter>Core\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXLoader.h">
+      <Filter>FDXLoader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
