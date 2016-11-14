@@ -6,7 +6,8 @@
   <ModelInfo Name="Dragon.fbx" />
   <ModelInfo Name="quad.fbx" />
   <ModelInfo Name="sphere.fbx" />-->
-  <!--<ModelInfo Name="Dragon.bin" />-->
-  <ModelInfo Name="sphere.bin" />
+  <!--<ModelInfo Name="Robot_Death.bin" />-->
+  <ModelInfo Name="Dragon.bin" />
+  <!--<ModelInfo Name="sphere.bin" />-->
 
 </Models>

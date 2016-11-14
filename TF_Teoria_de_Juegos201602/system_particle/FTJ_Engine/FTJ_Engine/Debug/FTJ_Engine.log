@@ -1,4 +1,4 @@
-﻿Compilación iniciada a las 12/11/2016 17:01:16.
+﻿Compilación iniciada a las 13/11/2016 20:52:19.
      1>Proyecto "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\FTJ_Engine.vcxproj" en el nodo 2 (Build destinos).
      1>FxCompile:
          C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T gs_4_0 /Fh "Default2D_GS.csh" /Fo "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\Default2D_GS.cso" /Vn "Default2D_GS" /Od /Zi Assets\Shaders\Default2D_GS.hlsl 
@@ -110,4 +110,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:40.48
+Tiempo transcurrido 00:00:57.89

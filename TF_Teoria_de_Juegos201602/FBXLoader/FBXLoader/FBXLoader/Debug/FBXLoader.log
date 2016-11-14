@@ -1,4 +1,4 @@
-﻿Compilación iniciada a las 12/11/2016 16:21:05.
+﻿Compilación iniciada a las 13/11/2016 19:50:16.
      1>Proyecto "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\FBXLoader\FBXLoader\FBXLoader\FBXLoader.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\UPC\Funda de Juegos\TFSDK\2015.1\include" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib main.cpp
@@ -15,4 +15,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:04.32
+Tiempo transcurrido 00:00:04.43

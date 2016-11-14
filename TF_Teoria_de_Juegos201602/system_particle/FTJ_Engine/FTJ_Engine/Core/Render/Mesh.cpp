@@ -99,7 +99,6 @@ namespace FTJ
 			return false;
 
 		}
-		//Model * pModel = *_ppModel = new Model();
 		int CuantosMesh = 0;
 		archivo.read((char*)&CuantosMesh, sizeof(int));
 		for (int i = 0; i < CuantosMesh; i++)
@@ -121,15 +120,6 @@ namespace FTJ
 				_pMesh->vertices.push_back(temp);
 
 			}
-			//archivo.read((char*)vertices, sizeof(MeshVertex)*CuantosVrt);
-		
-			//meshito->vVertices = vector<Vertex>(&vertices, sizeof(Vertex)*CuantosVrt);
-			/*for (int j = 0; j < CuantosVrt; j++)
-			{
-
-				_pMesh->vertices.push_back(vertices[j]);
-
-			}*/
 
 			archivo.read((char*)&CuantosIdx, sizeof (int));
 			unsigned int *indices = new unsigned int[CuantosIdx];
@@ -137,11 +127,10 @@ namespace FTJ
 
 			for (int j = 0; j < CuantosVrt*3; j++)
 			{
-				//_pMesh->indices.push_back(indices[j]);
 				_pMesh->indices.push_back(j);
 
 			}
-			//pModel->vMeshes.push_back(meshito);
+
 
 		}
 
