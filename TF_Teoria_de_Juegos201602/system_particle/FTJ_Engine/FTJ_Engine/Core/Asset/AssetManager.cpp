@@ -65,6 +65,9 @@ namespace FTJ
 		}
 
 		_model->vMeshes.push_back(nuevoM);
+
+
+
 	}
 
 	void LoadTextureAsync(ThreadTextureData* data)

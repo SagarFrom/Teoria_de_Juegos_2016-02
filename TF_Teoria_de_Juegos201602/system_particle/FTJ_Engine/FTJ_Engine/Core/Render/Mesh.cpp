@@ -94,48 +94,50 @@ namespace FTJ
 
 	int CMesh::LoadBIN(const char* path, CMesh* _pMesh)
 	{
-		ifstream archivo(path, ios::binary);
-		if (!archivo.is_open()){
-			return false;
+		bool readed = false;
 
-		}
-		int CuantosMesh = 0;
-		archivo.read((char*)&CuantosMesh, sizeof(int));
-		for (int i = 0; i < CuantosMesh; i++)
+		std::fstream file;
+		file.open(path, ios::binary | ios::in);
+
+		int Nvertices;
+
+
+		if (file.is_open())
 		{
-			int CuantosVrt = 0;
-			int CuantosIdx = 0;
-			archivo.read((char*)&CuantosVrt, sizeof(int));
-			MeshVertex* vertices = new MeshVertex[CuantosVrt];
-			MeshVertex temp;
-			float tempf[9];
+			file.read((char*)&Nvertices, sizeof(Nvertices));
 
-			for (int i = 0; i < CuantosVrt; i++)
+			for (int i = 0; i < Nvertices; i++)
 			{
-				archivo.read((char*)tempf, sizeof(float)* 9);
-				temp.pos = XMFLOAT3(tempf[0], tempf[1], tempf[2]);
-				temp.uv = XMFLOAT3(tempf[3], tempf[4], tempf[5]);
-				temp.normal = XMFLOAT3(tempf[6], tempf[7], tempf[8]);
+				XMFLOAT3 pos;
+				file.read((char*)&pos, sizeof(pos));
 
-				_pMesh->vertices.push_back(temp);
+				XMFLOAT3 uv;
+				file.read((char*)&uv, sizeof(uv));
+
+				XMFLOAT3 normal;
+				file.read((char*)&normal, sizeof(normal));
+
+				MeshVertex V;
+				V.pos = pos;
+				V.uv = uv;
+				V.normal = normal;
+				_pMesh->vertices.push_back(V);
 
 			}
 
-			archivo.read((char*)&CuantosIdx, sizeof (int));
-			unsigned int *indices = new unsigned int[CuantosIdx];
-			archivo.read((char*)indices, sizeof(unsigned int)*CuantosIdx);
+			int Nindices;
+			file.read((char*)&Nindices, sizeof(Nindices));
 
-			for (int j = 0; j < CuantosVrt*3; j++)
+			for (int i = 0; i < Nindices; i++)
 			{
-				_pMesh->indices.push_back(j);
+				uint x;
 
+				file.read((char*)&x, sizeof(x));
+				_pMesh->indices.push_back(x);
 			}
 
-
+			file.close();
 		}
-
-
-
 		return 1;
 	}
 

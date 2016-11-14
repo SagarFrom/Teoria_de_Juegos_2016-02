@@ -26,10 +26,10 @@ namespace FTJ
 		CRenderManager::GetInstance()->RegisterSceneCamera(
 			this, m_pCamera);
 
-		m_pCamera->GetGameObject()->GetTransform()->SetPosition(0, 0, -100.f);
+		m_pCamera->GetGameObject()->GetTransform()->SetPosition(0, 0, -6.f);
 
 		CGameObject* boxObject = m_EntityManager.Create_EmptyGameObject();
-		MeshRenderer* meshRenderer = new MeshRenderer(boxObject, "Robot_Death.bin");
+		MeshRenderer* meshRenderer = new MeshRenderer(boxObject, "Robot_Walk.bin");
 
 
 
