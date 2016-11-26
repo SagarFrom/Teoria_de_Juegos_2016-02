@@ -59,6 +59,7 @@ namespace FTJ
 
 		void LoadModels();
 		bool Load_FBXModel(FbxManager* manager, FbxImporter* importer, std::string _filename, Model** _ppModel);
+
 	public:
 		~CAssetManager();
 		CAssetManager();

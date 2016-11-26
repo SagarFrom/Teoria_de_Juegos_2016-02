@@ -53,6 +53,11 @@ namespace FTJ
 		//forward.setValue(worldMatrix[8], worldMatrix[9], worldMatrix[10]);
 		return this->m_Transform.r[2];
 	}
+	XMVECTOR CTransform::GetUp() const
+	{
+		return this->m_Transform.r[1];
+	}
+
 	XMVECTOR CTransform::GetRight() const
 	{
 		//float worldMatrix[16];
@@ -64,18 +69,31 @@ namespace FTJ
 		return this->m_Transform.r[0];
 	}
 
+	//void CTransform::Multiply(XMMATRIX& _m)
+	//{
+	//	m_Transform *= _m;
+	//}
+
 	//void IEntity::Translate(btVector3& _translation)
 	//{
 	//	SetPosition(GetPosition() + _translation);
 	//}
 	//
-	//void IEntity::RotateAxis(RotationAxis axis, float _fRadians)
-	//{
-	//	XMVECTOR _axis;
-	//	XMVectorSet(0.f, 0.f, 0.f, 0.f);
-	//	_axis.m128_f32[axis] = 1.f;
-	//	XMMATRIX vRot = XMMatrixRotationAxis(_axis, _fRadians);
-	//}
+	void CTransform::RotateAxis(RotationAxis axis, float _fRadians)
+	{
+		XMVECTOR _axis;
+		XMVectorSet(0.f, 0.f, 0.f, 0.f);
+		_axis.m128_f32[axis] = 1.f;
+		XMMATRIX vRot = XMMatrixRotationAxis(_axis, _fRadians);
+
+		m_Transform *= vRot;
+	}
+
+	void CTransform::Rotate(XMVECTOR _vector, float _fRadians)
+	{
+		XMMATRIX vRot = XMMatrixRotationAxis(_vector, _fRadians);
+		m_Transform = XMMatrixMultiply(m_Transform, vRot);
+	}
 
 	//FUNC used by render manager for drawing
 	DirectX::XMMATRIX CTransform::CalculateWorldMatrix()
@@ -115,5 +133,12 @@ namespace FTJ
 	void CTransform::Translate(XMVECTOR& _translation)
 	{
 		m_Transform.r[3] += _translation;
+	}
+
+	//==
+	void CTransform::LookAt(XMVECTOR _targetPosition)
+	{
+		XMVECTOR worldY = { 0, 1, 0, 0 };
+		m_Transform = XMMatrixLookAtLH(GetPosition(), _targetPosition, worldY);
 	}
 }

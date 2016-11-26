@@ -43,8 +43,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>F:\Program Files\Autodesk\FBX\FBX SDK\2015.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>F:\Program Files\Autodesk\FBX\FBX SDK\2015.1\lib\vs2013\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -56,12 +56,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\Program Files\Autodesk\FBX\FBX SDK\2015.1\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\UPC\Funda de Juegos\TFSDK\2015.1\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>debug\libfbxsdk-md.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>F:\Program Files\Autodesk\FBX\FBX SDK\2015.1\lib\vs2013\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

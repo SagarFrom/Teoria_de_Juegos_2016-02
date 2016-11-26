@@ -1,6 +1,7 @@
 #include "Game.h"
 
 #include "FTJ_Console.h"
+#include "Log\Log.h"
 
 using namespace FTJ;
 
@@ -40,6 +41,7 @@ CGame::CGame(HINSTANCE hinst, WNDPROC proc)
 #pragma endregion
 
 	FTJ::Console::CreateConsoleWindow();
+	//LogSetUp(L"FTJ");
 
 	m_pRenderManager = CRenderManager::GetInstance();
 	m_pRenderManager->Initialize(window, BACKBUFFER_WIDTH, BACKBUFFER_HEIGHT);
@@ -77,6 +79,11 @@ bool CGame::Run()
 
 	m_pEventManager->Update();
 
+
+	for (size_t i = 0; i < m_vGameScenes.size(); i++)
+	{
+		m_vGameScenes[i]->OnScene_Update(dt);
+	}
 	m_pInputManager->UpdateKeyStates(dt);
 
 	//RENDER

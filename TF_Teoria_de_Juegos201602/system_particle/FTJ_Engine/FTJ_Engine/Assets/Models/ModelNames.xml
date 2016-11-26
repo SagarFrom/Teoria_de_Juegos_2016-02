@@ -1,17 +1,17 @@
 <Models>
   <!--LEVEL MODELS-->
-  <!--<ModelInfo Name="star.obj" />
+  <!--<ModelInfo Name="star.bin" />
   <ModelInfo Name="hand.obj" />
-  <ModelInfo Name="cube.fbx" />
-  <ModelInfo Name="Dragon.fbx" />
-  <ModelInfo Name="quad.fbx" />
+  <ModelInfo Name="cube.fbx" />-->
+  <ModelInfo Name="Dragon.bin" />
+  <!--<ModelInfo Name="quad.fbx" />
   <ModelInfo Name="sphere.fbx" />-->
   <!--<ModelInfo Name="Robot_Death.bin" />-->
   <!--<ModelInfo Name="sphere.bin" />-->
   <!--<ModelInfo Name="cube.bin" />
   <ModelInfo Name="Dragon.bin" />
-  <ModelInfo Name="Robot_Death.bin" />-->
-  <ModelInfo Name="Robot_Walk.bin" />
+  <ModelInfo Name="Robot_Death.bin" />
+  <ModelInfo Name="Robot_Walk.bin" />-->
   <!--<ModelInfo Name="sphere.bin" />-->
 
 </Models>

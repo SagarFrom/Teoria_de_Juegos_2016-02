@@ -41,7 +41,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86;$(IncludePath)</IncludePath>
+    <ExecutablePath>E:\UPC\Funda de Juegos\TFSDK\2015.1\include;C:\Program Files\Autodesk\FBX\FBX SDK\2015.1\include;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86;C:\Program Files\Autodesk\FBX\FBX SDK\2015.1\lib\vs2013\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -53,12 +54,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\UPC\Funda de Juegos\TFSDK\2015.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\UPC\Funda de Juegos\TFSDK\2015.1\include;C:\Program Files\Autodesk\FBX\FBX SDK\2015.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86;C:\Program Files\Autodesk\FBX\FBX SDK\2015.1\lib\vs2013\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>debug\libfbxsdk-md.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -109,11 +110,14 @@
     <ClCompile Include="Core\Render\FTJ_RenderManager.cpp" />
     <ClCompile Include="Core\Render\Mesh.cpp" />
     <ClCompile Include="Core\Render\MeshRenderer.cpp" />
+    <ClCompile Include="Core\Render\ParticleContext.cpp" />
     <ClCompile Include="Core\Render\RenderComponent.cpp" />
     <ClCompile Include="Core\Render\SpriteRenderer.cpp" />
     <ClCompile Include="Core\Time\XTime.cpp" />
     <ClCompile Include="FBXLoader.cpp" />
+    <ClCompile Include="Game\Entities\CameraBehavior.cpp" />
     <ClCompile Include="Game\Entities\Player.cpp" />
+    <ClCompile Include="ParticleRender.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Asset\AssetManager.h" />
@@ -146,11 +150,14 @@
     <ClInclude Include="Core\Render\FTJ_ShaderDefinitions.h" />
     <ClInclude Include="Core\Render\Mesh.h" />
     <ClInclude Include="Core\Render\MeshRenderer.h" />
+    <ClInclude Include="Core\Render\ParticleContext.h" />
     <ClInclude Include="Core\Render\RenderComponent.h" />
     <ClInclude Include="Core\Render\SpriteRenderer.h" />
     <ClInclude Include="Core\Time\XTime.h" />
     <ClInclude Include="FBXLoader.h" />
+    <ClInclude Include="Game\Entities\CameraBehavior.h" />
     <ClInclude Include="Game\Entities\Player.h" />
+    <ClInclude Include="ParticleRender.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
@@ -188,7 +195,7 @@
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
       <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
-      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).csh</HeaderFileOutput>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assets\Shaders\CompiledShaders\%(Filename).csh</HeaderFileOutput>
       <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
       <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).csh</HeaderFileOutput>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
@@ -203,6 +210,20 @@
       <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).csh</HeaderFileOutput>
       <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
       <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).csh</HeaderFileOutput>
+    </FxCompile>
+    <FxCompile Include="DefaultParticle_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assets\Shaders\CompiledShaders\%(Filename).csh</HeaderFileOutput>
+    </FxCompile>
+    <FxCompile Include="DefaultParticle_VS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assets\Shaders\CompiledShaders\%(Filename).csh</HeaderFileOutput>
     </FxCompile>
   </ItemGroup>
   <ItemGroup>

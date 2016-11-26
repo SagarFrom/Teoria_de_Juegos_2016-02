@@ -10,6 +10,7 @@ namespace FTJ
 	CGameObject::CGameObject(CEntityManager* _em)
 	{
 		m_pEntityManager = _em;
+		m_pEntityManager->m_vGameObjects.push_back(this);
 
 		bToDestroy = false;
 	}

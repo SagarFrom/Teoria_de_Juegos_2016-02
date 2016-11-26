@@ -1,7 +1,7 @@
 #pragma once
 #include "RenderComponent.h"
 
-#include <d3d11.h>
+//#include <d3d11.h>
 
 namespace FTJ
 {

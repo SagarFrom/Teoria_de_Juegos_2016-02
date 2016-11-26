@@ -46,7 +46,7 @@
       <UniqueIdentifier>{335356a5-e3ad-4ce6-b9e6-1674e0412547}</UniqueIdentifier>
     </Filter>
     <Filter Include="FDXLoader">
-      <UniqueIdentifier>{f021afb2-90f6-4ef6-8da6-dd293f2a4290}</UniqueIdentifier>
+      <UniqueIdentifier>{45692e85-73c3-408c-87ce-108f57a0cb2a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -149,8 +149,17 @@
     <ClCompile Include="Core\Log\Log.cpp">
       <Filter>Core\Console</Filter>
     </ClCompile>
+    <ClCompile Include="Game\Entities\CameraBehavior.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
     <ClCompile Include="FBXLoader.cpp">
       <Filter>FDXLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\ParticleContext.cpp">
+      <Filter>Render\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleRender.cpp">
+      <Filter>Render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -259,8 +268,15 @@
     <ClInclude Include="Core\Log\Log.hpp">
       <Filter>Core\Console</Filter>
     </ClInclude>
+    <ClInclude Include="Game\Entities\CameraBehavior.h" />
     <ClInclude Include="FBXLoader.h">
       <Filter>FDXLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\ParticleContext.h">
+      <Filter>Render\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleRender.h">
+      <Filter>Render</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -277,6 +293,12 @@
       <Filter>Render\Shaders</Filter>
     </FxCompile>
     <FxCompile Include="Assets\Shaders\Default3D_VS.hlsl">
+      <Filter>Render\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="DefaultParticle_PS.hlsl">
+      <Filter>Render\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="DefaultParticle_VS.hlsl">
       <Filter>Render\Shaders</Filter>
     </FxCompile>
   </ItemGroup>

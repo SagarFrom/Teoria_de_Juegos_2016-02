@@ -12,6 +12,7 @@ using namespace DirectX;
 
 #include "2DContext.h"
 #include "3DContext.h"
+#include "ParticleContext.h"
 
 #include "../GameScenes/IGameScene.h"
 
@@ -73,6 +74,7 @@ namespace FTJ
 		//CONTEXT
 		C3DContext		m_3DContext;
 		C2DContext		m_2DContext;
+		CParticleContext m_ParticleContext;
 
 		int m_nWindowWidth, m_nWindowHeight;
 

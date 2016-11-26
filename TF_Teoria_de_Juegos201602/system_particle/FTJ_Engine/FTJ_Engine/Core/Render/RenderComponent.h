@@ -9,7 +9,7 @@ namespace FTJ
 {
 	using namespace ShaderDefinitions;
 
-	enum RENDER_CONTEXT { CONTEXT_2D, CONTEXT_3D};
+	enum RENDER_CONTEXT { CONTEXT_2D, CONTEXT_3D, CONTEXT_PARTICLE};
 
 	class CRenderManager;
 
@@ -18,7 +18,7 @@ namespace FTJ
 
 	class CTransform;
 
-	class CRenderComponent : public IComponent
+	__declspec(align(16)) class CRenderComponent : public IComponent
 	{
 	protected:
 		eDepth		m_eDepth;
@@ -39,5 +39,15 @@ namespace FTJ
 		void SetTexture(std::wstring _textureName);
 
 		virtual RENDER_CONTEXT GetRenderContext() const = 0;
+
+		void* operator new(size_t i)
+		{
+			return _mm_malloc(i, 16);
+		}
+
+			void operator delete(void* p)
+		{
+			_mm_free(p);
+		}
 	};
 }

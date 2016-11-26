@@ -58,16 +58,17 @@ namespace FTJ
 
 			// make cout, wcout, cin, wcin, wcerr, cerr, wclog and clog
 			// point to console as well
+#if 1
 			freopen_s(&fp, "CONIN$", "r", stdin);
 			
 			freopen_s(&fp, "CONOUT$", "r", stdout);
 			
 			freopen_s(&fp, "CONOUT$", "r", stderr);
-
-
-			//freopen("CONIN$", "r", stdin);
-			//freopen("CONOUT$", "w", stdout);
-			//freopen("CONOUT$", "w", stderr);
+#else
+			freopen("CONIN$", "r", stdin);
+			freopen("CONOUT$", "w", stdout);
+			freopen("CONOUT$", "w", stderr);
+#endif
 
 			std::ios::sync_with_stdio();
 

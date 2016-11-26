@@ -49,7 +49,7 @@ namespace FTJ
 		//XMMATRIX _rotation = XMMatrixRotationQuaternion(quat);
 
 
-#if 1
+#if 0
 		XMVECTOR position = GetGameObject()->GetTransform()->GetPosition();
 		XMMATRIX translation = XMMatrixTranslation(position.m128_f32[0], position.m128_f32[1], position.m128_f32[2]);
 

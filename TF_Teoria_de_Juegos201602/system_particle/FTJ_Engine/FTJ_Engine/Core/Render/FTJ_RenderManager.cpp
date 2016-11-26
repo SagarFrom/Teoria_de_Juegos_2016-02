@@ -180,6 +180,7 @@ namespace FTJ
 
 		m_3DContext.Initialize(this, device, viewports, context, DSV, RTV, m_pSceneCBuffer);
 		m_2DContext.Initialize(this, device, viewports, context, DSV, RTV);
+//		m_ParticleContext.Initialize(this, device, viewports, context, DSV, RTV);
 
 		m_mRenderableScenes[GAME_SCENE::SCENE_MAIN] = TRenderScene();
 	}
@@ -250,6 +251,10 @@ namespace FTJ
 
 		case RENDER_CONTEXT::CONTEXT_3D:
 			m_3DContext.Render(_pRenderComponent);
+			break;
+
+		case RENDER_CONTEXT::CONTEXT_PARTICLE:
+			m_ParticleContext.Render(_pRenderComponent);
 			break;
 		}
 	}

@@ -3,7 +3,6 @@
 * Date:      		10/7/15
 * Mod. Date: 		10/7/15
 * Mod. Initials:	DKR
-* Author:    		David Rasmussen
 * Purpose:   		A render context to render
 3D objects
 ************************************************/

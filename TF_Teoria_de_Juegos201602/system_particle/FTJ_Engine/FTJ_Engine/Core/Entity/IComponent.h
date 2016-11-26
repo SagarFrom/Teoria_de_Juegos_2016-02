@@ -7,7 +7,7 @@ namespace FTJ
 {
 	class CGameObject;
 
-	class IComponent
+	__declspec(align(16)) class IComponent
 	{
 	protected:
 		CGameObject* m_pGameObject;
@@ -25,6 +25,16 @@ namespace FTJ
 		bool IsEnabled() { return isEnabled; }
 
 		CGameObject* GetGameObject() const { return m_pGameObject; }
+
+		void* operator new(size_t i)
+		{
+			return _mm_malloc(i, 16);
+		}
+
+			void operator delete(void* p)
+		{
+			_mm_free(p);
+		}
 	};
 
 }
