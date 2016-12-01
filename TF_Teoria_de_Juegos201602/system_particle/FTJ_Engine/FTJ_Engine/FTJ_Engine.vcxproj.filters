@@ -48,6 +48,9 @@
     <Filter Include="FDXLoader">
       <UniqueIdentifier>{45692e85-73c3-408c-87ce-108f57a0cb2a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ParticleEntity">
+      <UniqueIdentifier>{28c617f2-e769-42ee-bf56-a9861ccf661e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Time\XTime.cpp">
@@ -160,6 +163,36 @@
     </ClCompile>
     <ClCompile Include="ParticleRender.cpp">
       <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSTextureLoader.cpp">
+      <Filter>ParticleEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="cameraclass.cpp">
+      <Filter>ParticleEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dclass.cpp">
+      <Filter>ParticleEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="graphicsclass.cpp">
+      <Filter>ParticleEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="inputclass.cpp">
+      <Filter>ParticleEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="particleshaderclass.cpp">
+      <Filter>ParticleEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="particlesystemclass.cpp">
+      <Filter>ParticleEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="systemclass.cpp">
+      <Filter>ParticleEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="textureclass.cpp">
+      <Filter>ParticleEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="timerclass.cpp">
+      <Filter>ParticleEntity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -278,6 +311,36 @@
     <ClInclude Include="ParticleRender.h">
       <Filter>Render</Filter>
     </ClInclude>
+    <ClInclude Include="d3dclass.h">
+      <Filter>ParticleEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="DDSTextureLoader.h">
+      <Filter>ParticleEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraClass.h">
+      <Filter>ParticleEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="graphicsclass.h">
+      <Filter>ParticleEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="inputclass.h">
+      <Filter>ParticleEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="particleshaderclass.h">
+      <Filter>ParticleEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="particlesystemclass.h">
+      <Filter>ParticleEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="systemclass.h">
+      <Filter>ParticleEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="textureclass.h">
+      <Filter>ParticleEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="timerclass.h">
+      <Filter>ParticleEntity</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Assets\Shaders\Default2D_GS.hlsl">
@@ -300,6 +363,12 @@
     </FxCompile>
     <FxCompile Include="DefaultParticle_VS.hlsl">
       <Filter>Render\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="PixelShader.hlsl">
+      <Filter>ParticleEntity</Filter>
+    </FxCompile>
+    <FxCompile Include="VertexShader.hlsl">
+      <Filter>ParticleEntity</Filter>
     </FxCompile>
   </ItemGroup>
   <ItemGroup>

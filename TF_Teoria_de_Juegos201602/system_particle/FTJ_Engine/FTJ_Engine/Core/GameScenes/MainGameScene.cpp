@@ -28,11 +28,11 @@ namespace FTJ
 		CRenderManager::GetInstance()->RegisterSceneCamera(
 			this, m_pCamera);
 
-		m_pCamera->GetGameObject()->GetTransform()->SetPosition(0, 0, -100.f);
+		m_pCamera->GetGameObject()->GetTransform()->SetPosition(0, 3, -6.f);
 		new CameraBehavior(m_pCamera->GetGameObject());
 
 		CGameObject* boxObject = m_EntityManager.Create_EmptyGameObject();
-		MeshRenderer* meshRenderer = new MeshRenderer(boxObject, "Dragon.bin");
+		MeshRenderer* meshRenderer = new MeshRenderer(boxObject, "Robot_Walk.bin");
 
 		XMVECTOR lookat = { 5.f, 0.f, 0.f, 1.f };
 		boxObject->GetTransform()->LookAt(lookat);

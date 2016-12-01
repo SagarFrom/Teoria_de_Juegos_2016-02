@@ -1,10 +1,14 @@
-﻿Compilación iniciada a las 26/11/2016 13:54:01.
+﻿Compilación iniciada a las 30/11/2016 23:37:39.
      1>Proyecto "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\FTJ_Engine.vcxproj" en el nodo 2 (Build destinos).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of DDSTextureLoader.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are Core\Asset\DDSTextureLoader.cpp, DDSTextureLoader.cpp.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\UPC\Funda de Juegos\TFSDK\2015.1\include" /I"C:\Program Files\Autodesk\FBX\FBX SDK\2015.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Core\GameScenes\MainGameScene.cpp
-         MainGameScene.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\UPC\Funda de Juegos\TFSDK\2015.1\include" /I"C:\Program Files\Autodesk\FBX\FBX SDK\2015.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt particlesystemclass.cpp
+         particlesystemclass.cpp
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\particlesystemclass.cpp(347): warning C4244: '=' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>c:\users\diego\documents\github\teoria_de_juegos_2016-02\tf_teoria_de_juegos201602\system_particle\ftj_engine\ftj_engine\particlesystemclass.cpp(350): warning C4244: '=' : conversión de 'double' a 'float'; posible pérdida de datos
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\UPC\Funda de Juegos\TFSDK\2015.1\lib\vs2013\x86" /LIBPATH:"C:\Program Files\Autodesk\FBX\FBX SDK\2015.1\lib\vs2013\x86" "debug\libfbxsdk-md.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.lib" /MACHINE:X86 Debug\FTJ_Engine.res
+         Debug\cameraclass.obj
          Debug\AssetManager.obj
          Debug\DDSTextureLoader.obj
          Debug\tinystr.obj
@@ -38,13 +42,23 @@
          Debug\RenderComponent.obj
          Debug\SpriteRenderer.obj
          Debug\XTime.obj
+         Debug\d3dclass.obj
+         Debug\DDSTextureLoader.obj
          Debug\FBXLoader.obj
          Debug\CameraBehavior.obj
          Debug\Player.obj
+         Debug\graphicsclass.obj
+         Debug\inputclass.obj
          Debug\ParticleRender.obj
+         Debug\particleshaderclass.obj
+         Debug\particlesystemclass.obj
+         Debug\systemclass.obj
+         Debug\textureclass.obj
+         Debug\timerclass.obj
+     1>Debug\DDSTextureLoader.obj : warning LNK4042: objeto especificado mßs de una vez; omitidos los sobrantes
          FTJ_Engine.vcxproj -> C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\Debug\FTJ_Engine.exe
      1>Compilación del proyecto terminada "C:\Users\Diego\Documents\GitHub\Teoria_de_Juegos_2016-02\TF_Teoria_de_Juegos201602\system_particle\FTJ_Engine\FTJ_Engine\FTJ_Engine.vcxproj" (Build destinos).
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:03.45
+Tiempo transcurrido 00:00:03.19

@@ -3,7 +3,7 @@
   <!--<ModelInfo Name="star.bin" />
   <ModelInfo Name="hand.obj" />
   <ModelInfo Name="cube.fbx" />-->
-  <ModelInfo Name="Dragon.bin" />
+  <ModelInfo Name="Robot_Walk.bin" />
   <!--<ModelInfo Name="quad.fbx" />
   <ModelInfo Name="sphere.fbx" />-->
   <!--<ModelInfo Name="Robot_Death.bin" />-->
@@ -14,4 +14,9 @@
   <ModelInfo Name="Robot_Walk.bin" />-->
   <!--<ModelInfo Name="sphere.bin" />-->
 
+  
+  
+  
+  
+  
 </Models>
