@@ -1,7 +1,11 @@
 ### Teoria_de_Juegos_2016-02
 
 #System Particle
+
+
 ![image](https://cloud.githubusercontent.com/assets/8761157/20780521/9cad4852-b749-11e6-8ec6-efa317e7e7d8.png)
+
+![image](https://cloud.githubusercontent.com/assets/8761157/20780555/e34531c6-b749-11e6-961f-5ff62815e364.png)
 
 
 #Read from model
